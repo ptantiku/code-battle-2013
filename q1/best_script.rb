@@ -4,7 +4,7 @@
 all = [*'0000'..'9999']
 
 # read from file to array
-File.open('numbers.txt').each_line do |line|
+File.open('numbers.txt','r').each_line do |line|
 	all[line.to_i] = nil
 end
 
