@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # create pre-defined array
-all = [*0..9999]
+all = [*'0000'..'9999']
 
 # read from file to array
 File.open('numbers.txt').each_line do |line|
@@ -9,4 +9,4 @@ File.open('numbers.txt').each_line do |line|
 end
 
 # write to file
-File.open('run_result.txt','w').puts all.compact!.map!{|i| '%04d'%i}
+File.open('run_result.txt','w').puts all.compact!
