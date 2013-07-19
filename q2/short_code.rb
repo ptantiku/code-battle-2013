@@ -1,2 +1,3 @@
 #!/usr/bin/env ruby
-IO.readlines('numbers.txt').sort.chunk(&:chomp).each{|i,v|p [i,v.size]}
+# usage: ruby short_code.rb < numbers.txt
+STDIN.readlines.sort.chunk(&:to_i).map{|i,v|p [i,v.size]}
